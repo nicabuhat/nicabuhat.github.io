@@ -20,7 +20,7 @@ a {
   text-decoration: none;
 }
 
-button {
+.button {
   font-family: "Futura 700";
   padding: 2rem 4rem;
   background-color: #f8f7f7;
@@ -28,9 +28,9 @@ button {
   cursor: pointer;
 }
 
-button:hover,
-button:active,
-button:visited {
+.button:hover,
+.button:active,
+.button:visited {
   background-color: #fdce22;
 }
 
@@ -402,6 +402,10 @@ nav {
     width: 100%;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f8f7f7;
   color: #242424;
