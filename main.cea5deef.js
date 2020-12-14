@@ -136,6 +136,21 @@ close.addEventListener("click", closeNav);
 function closeNav() {
   document.getElementsByClassName("overlay")[0].style.width = "0%";
 }
+
+var scriptURL = "https://script.google.com/macros/s/AKfycbz-BX5ykrr4Rr8d8SkjZjTWwulyk0TLsVbrzouZWrKTuJjRZ7E/exec";
+var form = document.forms["submit-to-google-sheet"];
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  fetch(scriptURL, {
+    method: "POST",
+    body: new FormData(form)
+  }).then(function (response) {
+    alert("Your message has been sent");
+    location.reload(true);
+  }).catch(function (error) {
+    return console.error("Error!", error.message);
+  });
+});
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -164,7 +179,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63712" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60665" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
