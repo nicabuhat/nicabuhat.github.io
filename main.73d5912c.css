@@ -396,6 +396,7 @@ nav {
   .contact--content {
     padding: 0;
     text-align: center;
+    width: 90%;
   }
 
   .form--button {
