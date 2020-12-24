@@ -118,11 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"assets/js/main.js":[function(require,module,exports) {
-// function openNav() {
-//   //   document.getElementByClass("overlay").style.width = "100%";
-//   document.getElementByClass("header").style.background = "red";
-//   alert("yo");
-// }
+// BURGER MENU
 var toggler = document.getElementById("toggle");
 toggler.addEventListener("click", toggle);
 
@@ -135,7 +131,8 @@ close.addEventListener("click", closeNav);
 
 function closeNav() {
   document.getElementsByClassName("overlay")[0].style.width = "0%";
-}
+} // FORM SUBMISSION
+
 
 var scriptURL = "https://script.google.com/macros/s/AKfycbz-BX5ykrr4Rr8d8SkjZjTWwulyk0TLsVbrzouZWrKTuJjRZ7E/exec";
 var form = document.forms["submit-to-google-sheet"];
@@ -179,7 +176,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51150" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58658" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

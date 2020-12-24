@@ -175,6 +175,25 @@ nav {
     padding: 2rem 4rem;
   }
 }
+.footer {
+  background-color: #1c4a9f;
+  color: #d2d2d2;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 12rem;
+}
+.footer--social {
+  height: 2rem;
+}
+.footer--right > a:nth-child(2) {
+  padding: 0 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    padding: 2rem 4rem;
+  }
+}
 .section {
   padding: 1rem 12rem;
 }
@@ -249,6 +268,9 @@ nav {
 .projects--content {
   padding: 0 14rem;
   width: 70%;
+}
+.projects--buttonside {
+  text-align: center;
 }
 .projects--buttonbottom {
   display: none;
