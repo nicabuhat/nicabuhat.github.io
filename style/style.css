@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Patrick+Hand+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap');
+
+:root {
+    --black0: #202020;
+    --primary0: #ebc064;
+    --secondary0: #00b4db;
+    --white0: #ffffff;
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--white0);
+    color: var(--black0);
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Patrick Hand SC', cursive;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    background-color: var(--secondary0);
+    border: 3px solid var(--black0);
+    padding: 0.5rem 1rem;
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 2.4rem;
+}
+
+.header {
+    margin: 3rem;
+}
+
+.logo {
+    margin-right: 2rem;
+    height: 2rem;
+}
+
+.header,
+.nav,
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav,
+.menu,
+.social {
+    justify-content: space-between;
+}
+
+.nav {
+    width: 100%;
+}
+
+.menu > *:nth-child(2),
+.social > *:nth-child(2) {
+    border-left: 1rem solid var(--white0);
+    border-right: 1rem solid var(--white0);
+}
+
+.menu a {
+    font-size: 1.8rem;
+    position: relative;
+}
+
+.menu a::before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+    left: 0;
+    background: var(--primary0);
+    height: 5px;
+    z-index: -1;
+}
+
+.menu a:hover::before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background: var(--primary0);
+    z-index: -1;
+}
+
+.social > a > * {
+    height: 1.75rem;
+    width: 1.75rem;
+}
+
+.btn {
+    display: block;
+    margin-top: 4rem;
+    padding: 1.5rem 2rem;
+    background-color: var(--secondary0);
+    border: 2px solid var(--black0);
+    box-shadow: 4px 5px 4px 0;
+    font-size: 2.4rem;
+    font-family: 'Patrick Hand SC', cursive;
+    position: relative;
+}
+
+.btn::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: var(--black0);
+    left: 5px;
+    bottom: -5px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.btn:focus,
+.btn:hover,
+.btn:active {
+    outline: none;
+    transform: translate(5px, 5px);
+    box-shadow: 0 0 0 0;
+}
+
+.btn:focus::before,
+.btn:hover::before,
+.btn:active::before {
+    width: 0;
+    height: 0;
+}
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100%;
+    align-items: center;
+    height: 90vh;
+    background: url(../img/cat-person.svg);
+    background-position: 150% 0;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    text-align: center;
+}
+
+.introduction {
+    font-size: 4.8rem;
+    text-transform: uppercase;
+}
+
+.h2 {
+    font-size: 3.2rem;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.hero > strong {
+    position: relative;
+}
+
+.hero > strong::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    background: var(--primary0);
+    z-index: -1;
+    height: 20px;
+}
+
+@media only screen and (min-width: 700px) {
+    .introduction {
+        font-size: 7.2rem;
+    }
+
+    .h2 {
+        font-size: 4.8rem;
+        font-family: 'Patrick Hand', cursive;
+    }
+
+    .landing .btn {
+        margin-bottom: 8rem;
+        padding: 1rem 2rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        max-width: 1300px;
+        margin: 0;
+    }
+    .header {
+        margin: 3rem 12rem;
+    }
+    .landing {
+        padding: 0;
+        margin: 0 80px 0 160px;
+        height: 85vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background-position: right bottom;
+        background-size: 70vh;
+        text-align: left;
+    }
+}
